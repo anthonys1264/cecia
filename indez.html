@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🎉 CECIA  🎉</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-image: url("https://i.pinimg.com/originals/26/ed/fe/26edfe7476f61c0afa0ad92574065225.gif");
+      background-size: cover;
+      background-repeat: no-repeat;
+      text-align: center;
+      color: #fff;
+    }
+
+    h1 {
+      margin-top: 50px;
+      font-size: 2.5em;
+      color: #ffdbf0;
+      text-shadow: 2px 2px 4px #000;
+    }
+
+    h2 {
+      margin: 20px auto;
+      font-size: 1.2em;
+      color: #ffffff;
+      text-shadow: 1px 1px 2px #000;
+      max-width: 90%;
+    }
+
+    .card {
+      width: 90%;
+      max-width: 350px;
+      height: 430px;
+      margin: 20px auto;
+      border: 2px solid #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      cursor: pointer;
+      background-color: #229cbb;
+      background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRD7WrPx7bHc2LvC8Vx1n3cLhSucMJ9qKhVBA&usqp=CAU");
+      background-size: cover;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    }
+
+    .card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .card .content {
+      display: none;
+      padding: 15px;
+      background-color: rgba(0, 0, 0, 0.6); /* Fondo semi-transparente */
+      height: 100%;
+      overflow-y: auto;
+      border-radius: 8px;
+    }
+
+    .card.clicked img {
+      display: none;
+    }
+
+    .card.clicked .content {
+      display: block;
+    }
+
+    .content h3 {
+      margin-top: 0;
+      color: #ffccff;
+    }
+
+    .content p {
+      font-size: 1em;
+      line-height: 1.6;
+      color: #ffffff;
+      text-shadow: 1px 1px 3px #000; /* Mejora la legibilidad */
+    }
+
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      width: 90%;
+      max-width: 560px;
+      margin: 30px auto;
+      display: none;
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .confetti, .heart {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-color: #ff4081;
+      border-radius: 50%;
+    }
+
+    .heart {
+      width: 20px;
+      height: 20px;
+      animation: heart 4s linear infinite;
+    }
+
+    .confetti {
+      animation: confetti 3s linear infinite;
+    }
+
+    @keyframes confetti {
+      0% { transform: translateY(0) rotate(0deg); }
+      100% { transform: translateY(-600px) rotate(720deg); }
+    }
+
+    @keyframes heart {
+      0% { transform: translateY(0) scale(1); }
+      50% { transform: translateY(-500px) scale(0.5); }
+      100% { transform: translateY(-1000px) scale(1); }
+    }
+
+    @media screen and (max-width: 600px) {
+      h1 {
+        font-size: 2em;
+      }
+
+      .card {
+        height: 400px;
+      }
+
+      .content p {
+        font-size: 0.95em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>La noche más linda del mundo 🎂</h1>
+  <h2>Haz clic en tu imagen... ¡ándaleee! 😄</h2>
+
+  <div id="confetti-container"></div>
+  <div id="heart-container"></div>
+
+  <div class="card" onclick="toggleCard(this)">
+    <img id="card-image" src="https://scontent.faqp2-2.fna.fbcdn.net/v/t39.30808-6/440748569_7556245201120620_1703799712282210689_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=102&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeH8r2lDcN_Eji2FQALBkiDN3bh7-7n5807duHv7ufnzTiXAsRno53AwNMdBAceYIt-JB3QDjLTwNrxKCHqJTdB0&_nc_ohc=__XKl1_0lS0Q7kNvwHhw3GM&_nc_oc=Adn2siwo85AKbIKx9d4UmjCYPc6oDm7FECWDl_IdlryjrTaTHGLeEtySguACa2UgU_XAUjZ_SLIqI_zb4SHdQ5pG&_nc_zt=23&_nc_ht=scontent.faqp2-2.fna&_nc_gid=tzz5m6JLx7Ovy5yinlUB1w&oh=00_AfHBbxVkasnm5Zo7FWmVJxCBv1OhNw2lPZnmyrv7_DGLeQ&oe=6815EE1E" alt="Presióname">
+    <div id="card-text" class="content">
+      <h3>Una carta lindísima para ti 💖 XD </h3>
+      <p>
+        Ahora que por fin nos hemos conocido en persona, quería aprovechar para escribirte estas palabras. La verdad es que me siento muy afortunado de haberte encontrado 
+        y de que nuestra amistad haya crecido tanto en tan poco tiempo.
+        <br><br>
+        Me ha sorprendido lo fácil que fue conectar contigo. Compartir momentos, risas y conversaciones me ha hecho sentir que nos conocemos de toda la vida. 
+        Cada instante que hemos pasado juntos ha sido especial, y me hace muy feliz saber que te conocí. 
+
+        Te agradezco mucho por ser como eres: auténtica, generosa y siempre dispuesta a compartir un buen rato. Es raro encontrar alguien tan valiosa, y quiero que sepas 
+        que la aprecio mucho.
+        <br><br>
+        Otra vez yo haciendo estas cositas para que te rías 😅... Pero es porque te lo mereces. Fue genial conocerte y aunque no diga mucho a veces, te aprecio un montón. 
+        Me gustaría pasar más tiempo contigo tal vez algún día regrese por ti. De verdad quisiera acompañarte donde tú quieras; una buena historia comienza cuando los dos la contamos 😄😄 .
+        <br><br>
+        Este es solo el comienzo de lo que espero, llena de momentos memorables. ¡Estoy emocionado de ver qué nos depara el futuro!
+
+        Con todo mi cariño, y el tiempo que me sobra xd <br>
+        — Atte: YO 🫣
+      </p>
+    </div>
+  </div>
+
+  <!-- Contenedor del video -->
+  <div id="video-wrapper" class="video-container"></div>
+
+  <script>
+    function toggleCard(card) {
+      card.classList.toggle("clicked");
+
+      const videoWrapper = document.getElementById("video-wrapper");
+
+      if (card.classList.contains("clicked")) {
+        videoWrapper.style.display = "block";
+        videoWrapper.innerHTML = `
+          <iframe src="https://www.youtube.com/embed/kQaTQ8nV_-I?start=16&autoplay=1&controls=1" 
+                  title="Video de cumpleaños" 
+                  frameborder="0" 
+                  allow="autoplay; encrypted-media" 
+                  allowfullscreen>
+          </iframe>
+        `;
+      } else {
+        videoWrapper.innerHTML = "";
+        videoWrapper.style.display = "none";
+      }
+    }
+
+    function createParticles(type, count) {
+      const container = document.getElementById(type + "-container");
+      for (let i = 0; i < count; i++) {
+        const el = document.createElement("div");
+        el.className = type;
+        el.style.left = Math.random() * 100 + "%";
+        el.style.animationDelay = Math.random() * 3 + "s";
+        container.appendChild(el);
+      }
+    }
+
+    createParticles("confetti", 100);
+    createParticles("heart", 30);
+  </script>
+</body>
+</html>
